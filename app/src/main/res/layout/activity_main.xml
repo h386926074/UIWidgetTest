@@ -11,6 +11,20 @@
         android:text="Hello World!"
         android:gravity="center_horizontal|center_vertical"
         android:textSize="24px"
-        android:textColor="@android:color/holo_green_light"/>
+        android:textColor="@android:color/holo_green_light"
+        android:background="@android:color/holo_red_dark"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:text="Button"
+        android:textAllCaps="false"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_text"
+        android:hint="Type something here"
+        android:maxLines="2"/>
 </LinearLayout>
