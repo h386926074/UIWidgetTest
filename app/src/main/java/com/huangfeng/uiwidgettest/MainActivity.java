@@ -1,11 +1,13 @@
 package com.huangfeng.uiwidgettest;
 
+import android.support.annotation.DrawableRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -30,8 +32,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId()){
             case R.id.button:
             {
+                ImageView imagev = (ImageView) findViewById(R.id.image_view);
+                imagev.setImageResource(R.drawable.img_2);
+
                 EditText editTexts = (EditText) findViewById(R.id.edit_text);
-                editTexts.setText("I wirit some string");
+                editTexts.setText("I write some string");
                 Toast.makeText(this,editTexts.getText().toString(),Toast.LENGTH_SHORT).show();
             }
                 break;
