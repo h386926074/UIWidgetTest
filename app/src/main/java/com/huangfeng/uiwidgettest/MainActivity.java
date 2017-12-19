@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button:
             {
                 ImageView imagev = (ImageView) findViewById(R.id.image_view);
-                imagev.setImageResource(R.drawable.img_2);
+                imagev.setImageResource(R.drawable.img2);
 
                 EditText editTexts = (EditText) findViewById(R.id.edit_text);
                 editTexts.setText("I write some string");
