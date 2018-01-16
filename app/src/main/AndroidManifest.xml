@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".LayoutActivity" />
-        <activity android:name=".percent_layout"></activity>
+        <activity android:name=".percent_layout" />
+        <activity android:name=".new_percent"></activity>
     </application>
 
 </manifest>

@@ -19,6 +19,6 @@ public class percent_layout extends AppCompatActivity implements View.OnClickLis
     }
 
     public void add(View v){
-
+        finish();
     }
 }

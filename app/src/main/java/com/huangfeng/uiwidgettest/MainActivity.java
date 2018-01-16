@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView imageview;
     private ProgressBar progress_bar;
     private Button button1;
+    private Button button4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,8 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         progress_bar=(ProgressBar) findViewById(R.id.progress_bar);
         button1 = (Button)findViewById(R.id.button_2);
         button1.setOnClickListener(this);
-
         button.setOnClickListener(this);
+        button4 = (Button) findViewById(R.id.button_4);
+        button4.setOnClickListener(this);
 
 //            @Override
 //            public void onClick(View v) {
@@ -93,6 +95,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent(this,LayoutActivity.class);
                 startActivity(intent);
             }
+                break;
+            case R.id.button_4:{
+                Intent intent = new Intent(this,percent_layout.class);
+                startActivity(intent);
+            }
+            break;
             default:
                 break;
         }
