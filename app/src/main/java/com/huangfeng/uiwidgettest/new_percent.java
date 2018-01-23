@@ -8,6 +8,6 @@ public class new_percent extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.new_percent_layout);
+        setContentView(R.layout.new_new_percent);
     }
 }
