@@ -1,5 +1,6 @@
 package com.huangfeng.uiwidgettest;
 
+import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -24,11 +25,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button button1;
     private Button button4;
     private Button button3;//percentlayout
+    private Button button_mlistview;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        android.support.v7.app.ActionBar actionbar =getSupportActionBar();
+        if (actionbar !=null){
+            actionbar.hide();
+        }
+
+
 
         editText = (EditText) findViewById(R.id.edit_text);
         button = (Button) findViewById(R.id.button);
@@ -43,6 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         button3 = (Button) findViewById(R.id.button_3);
         button3.setOnClickListener(this);
 
+        button_mlistview = (Button) findViewById(R.id.button_mlistvie);
+        button_mlistview.setOnClickListener(this);
 //            @Override
 //            public void onClick(View v) {
 //                Log.d(TAG, "onClick: ");
@@ -112,6 +122,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
             break;
+
+            case R.id.button_mlistvie:{
+                Intent intent = new Intent(this,ListViewActivity.class);
+                startActivity(intent);
+            }
+            break;
+
 
             default:
                 break;
