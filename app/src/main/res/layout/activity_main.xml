@@ -60,6 +60,11 @@
         android:id="@+id/button_mlistvie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="list_view"/>
+        android:text="listview 简单使用"/>
 
+    <Button
+        android:id="@+id/button_listview2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="定制listview的界面"/>
 </LinearLayout>

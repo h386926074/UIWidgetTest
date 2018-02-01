@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button button4;
     private Button button3;//percentlayout
     private Button button_mlistview;
+    private Button button_listview2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         button_mlistview = (Button) findViewById(R.id.button_mlistvie);
         button_mlistview.setOnClickListener(this);
+
+        button_listview2 = (Button) findViewById(R.id.button_listview2);
+        button_listview2.setOnClickListener(this);
 //            @Override
 //            public void onClick(View v) {
 //                Log.d(TAG, "onClick: ");
@@ -128,7 +132,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
             break;
-
+            case R.id.button_listview2:{
+                Intent intent = new Intent(this,ListViewActivity.class);
+                startActivity(intent);
+            }
+            break;
 
             default:
                 break;

@@ -19,7 +19,8 @@
         <activity android:name=".LayoutActivity" />
         <activity android:name=".percent_layout" />
         <activity android:name=".new_percent" />
-        <activity android:name=".ListViewActivity"></activity>
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".SecondListViewAcitvity"></activity>
     </application>
 
 </manifest>
