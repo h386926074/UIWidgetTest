@@ -133,7 +133,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             break;
             case R.id.button_listview2:{
-                Intent intent = new Intent(this,ListViewActivity.class);
+                Intent intent = new Intent(this,SecondListViewAcitvity.class);
                 startActivity(intent);
             }
             break;

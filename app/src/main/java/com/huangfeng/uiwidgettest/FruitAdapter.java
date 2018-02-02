@@ -31,11 +31,20 @@ public class FruitAdapter extends ArrayAdapter<Fruit> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
 
         Fruit fruit = getItem(position);
-        View view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
+        View view;
+
+        if (convertView == null){
+            view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
+        }else{
+            view = convertView;
+        }
+
         ImageView fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
         TextView fruittext = (TextView) view.findViewById(R.id.fruit_name);
         fruitImage.setImageResource(fruit.getImageId());
         fruittext.setText(fruit.getName());
         return view;
     }
+
+    
 }
