@@ -2,7 +2,10 @@ package com.huangfeng.uiwidgettest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +25,13 @@ public class SecondListViewAcitvity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.sencond_listview);
         listView.setAdapter(adapter);
 
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Fruit fruit = fruitList.get(position);
+                Toast.makeText(SecondListViewAcitvity.this,fruit.getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
@@ -52,5 +62,9 @@ public class SecondListViewAcitvity extends AppCompatActivity {
             Fruit pineapple = new Fruit("Pineapple", R.drawable.icon_pineapple);
             fruitList.add(pineapple);
         }
+
+
+
+
     }
 }

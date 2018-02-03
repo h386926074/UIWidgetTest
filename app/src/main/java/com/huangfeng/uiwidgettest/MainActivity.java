@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button button3;//percentlayout
     private Button button_mlistview;
     private Button button_listview2;
+    private Button button_5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                Log.d(TAG, "onClick: ");
 //            }
 //        });
+        button_5 = (Button)findViewById(R.id.button_recycleview);
+        button_5.setOnClickListener(this);
     }
 
     @Override
@@ -137,6 +140,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
             break;
+            case R.id.button_recycleview:{
+                Intent intent = new Intent(this,recycle_activity.class);
+                startActivity(intent);
+            }
+            break;
+
 
             default:
                 break;

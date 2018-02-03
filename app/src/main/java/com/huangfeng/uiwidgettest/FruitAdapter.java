@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,18 +35,27 @@ public class FruitAdapter extends ArrayAdapter<Fruit> {
         Fruit fruit = getItem(position);
         View view;
 
+        ViewHolder viewHolder;
         if (convertView == null){
             view = LayoutInflater.from(getContext()).inflate(resourceId,parent,false);
+            viewHolder = new ViewHolder();
+            viewHolder.fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
+            viewHolder.fruitName = (TextView) view.findViewById(R.id.fruit_name);
+            view.setTag(viewHolder);
         }else{
             view = convertView;
+            viewHolder = (ViewHolder) view.getTag();
         }
 
-        ImageView fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
-        TextView fruittext = (TextView) view.findViewById(R.id.fruit_name);
-        fruitImage.setImageResource(fruit.getImageId());
-        fruittext.setText(fruit.getName());
+        viewHolder.fruitName.setText(fruit.getName());
+        viewHolder.fruitImage.setImageResource(fruit.getImageId());
         return view;
     }
 
-    
+    class ViewHolder{
+        ImageView fruitImage;
+        TextView fruitName;
+    }
+
+
 }

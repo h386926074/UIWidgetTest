@@ -67,4 +67,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="定制listview的界面"/>
+
+    <Button
+        android:id="@+id/button_recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecycleView的基本用法"/>
 </LinearLayout>
