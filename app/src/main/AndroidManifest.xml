@@ -21,7 +21,10 @@
         <activity android:name=".new_percent" />
         <activity android:name=".ListViewActivity" />
         <activity android:name=".SecondListViewAcitvity" />
-        <activity android:name=".recycle_activity"></activity>
+        <activity android:name=".recycle_activity" />
+        <activity android:name=".HorizontalRecyclerViewActivity" />
+        <activity android:name=".StaggeredGridActivity" />
+        <activity android:name=".UIBestPracticeActivity"></activity>
     </application>
 
 </manifest>
