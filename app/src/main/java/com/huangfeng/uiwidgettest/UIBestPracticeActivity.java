@@ -1,9 +1,11 @@
 package com.huangfeng.uiwidgettest;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -28,6 +30,7 @@ public class UIBestPracticeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.uibest_practice_layout);
 
+        initMsgs();
 
         inputText = (EditText) findViewById(R.id.input_text);
         send = (Button) findViewById(R.id.send);
@@ -36,8 +39,19 @@ public class UIBestPracticeActivity extends AppCompatActivity {
         msgRecycleView.setLayoutManager(layoutManager);
         adapter = new MsgAdapter(msgList);
 
-        
-
+        msgRecycleView.setAdapter(adapter);
+        send.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String content = inputText.getText().toString();
+                if (!"".equals(content)){
+                    Msg msg = new Msg(content,Msg.TYPE_SENT);
+                    msgList.add(msg);
+                    adapter.notifyItemInserted(msgList.size() - 1);
+                    inputText.setText("");
+                }
+            }
+        });
 
     }
 

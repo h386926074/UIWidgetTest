@@ -1,5 +1,6 @@
 package com.huangfeng.uiwidgettest;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,8 +13,10 @@ import android.widget.Toast;
 
 public class ListViewActivity extends AppCompatActivity {
 
+
+
     private String[] data = {"Apple","Banana","Orange","Watermelon","Pear","recyclerview 实现横向滚动","recyclerview 瀑布流布局",
-    "UIBestPractice"};
+    "UIBestPractice","FragmentTest","FragmentBestPractice"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,18 @@ public class ListViewActivity extends AppCompatActivity {
 
                     case 7:{
                         Intent intent = new Intent(ListViewActivity.this,UIBestPracticeActivity.class);
+                        startActivity(intent);
+                    }
+                    break;
+
+                    case 8:{
+                        Intent intent = new Intent(ListViewActivity.this,FragmentTestActivity.class);
+                        startActivity(intent);
+                    }
+                    break;
+
+                    case 9:{
+                        Intent intent = new Intent(ListViewActivity.this,NewsContentFragment.class);
                         startActivity(intent);
                     }
                     break;

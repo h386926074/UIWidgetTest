@@ -24,7 +24,9 @@
         <activity android:name=".recycle_activity" />
         <activity android:name=".HorizontalRecyclerViewActivity" />
         <activity android:name=".StaggeredGridActivity" />
-        <activity android:name=".UIBestPracticeActivity"></activity>
+        <activity android:name=".UIBestPracticeActivity" />
+        <activity android:name=".FragmentTestActivity" />
+        <activity android:name=".NewsContentActivity"></activity>
     </application>
 
 </manifest>
