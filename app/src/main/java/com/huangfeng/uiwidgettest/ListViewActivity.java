@@ -55,7 +55,7 @@ public class ListViewActivity extends AppCompatActivity {
                     break;
 
                     case 9:{
-                        Intent intent = new Intent(ListViewActivity.this,NewsContentFragment.class);
+                        Intent intent = new Intent(ListViewActivity.this,news_main_activity.class);
                         startActivity(intent);
                     }
                     break;

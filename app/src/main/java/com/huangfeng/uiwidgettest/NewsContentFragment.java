@@ -22,7 +22,7 @@ public class NewsContentFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        view = inflater.inflate(R.layout.news_content_frag,container,false);
+        view = inflater.inflate(R.layout.news_content_frag,null);
         return view;
 
     }

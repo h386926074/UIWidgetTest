@@ -26,7 +26,8 @@
         <activity android:name=".StaggeredGridActivity" />
         <activity android:name=".UIBestPracticeActivity" />
         <activity android:name=".FragmentTestActivity" />
-        <activity android:name=".NewsContentActivity"></activity>
+        <activity android:name=".NewsContentActivity" />
+        <activity android:name=".news_main_activity"></activity>
     </application>
 
 </manifest>
