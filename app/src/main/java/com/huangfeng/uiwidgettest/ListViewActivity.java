@@ -16,7 +16,7 @@ public class ListViewActivity extends AppCompatActivity {
 
 
     private String[] data = {"Apple","Banana","Orange","Watermelon","Pear","recyclerview 实现横向滚动","recyclerview 瀑布流布局",
-    "UIBestPractice","FragmentTest","FragmentBestPractice","BroadcastTest"};
+    "UIBestPractice","FragmentTest","FragmentBestPractice","BroadcastTest","Intent理解"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +62,12 @@ public class ListViewActivity extends AppCompatActivity {
 
                     case 10:{
                         Intent intent = new Intent(ListViewActivity.this,BoradcastTest.class);
+                        startActivity(intent);
+                    }
+                    break;
+
+                    case 11:{
+                        Intent intent = new Intent(ListViewActivity.this,LearnIntent.class);
                         startActivity(intent);
                     }
                     break;
