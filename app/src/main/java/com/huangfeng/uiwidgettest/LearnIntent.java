@@ -91,7 +91,14 @@ public class LearnIntent extends AppCompatActivity {
 
 
         // Context
-
+        /*
+        * 访问全局信息的接口   全局信息共享的桥梁
+        *acvtivity service  继承自 context
+        *
+        *
+        *
+        * */
+        String str = getString(R.string.hello_world);
 
 
 
