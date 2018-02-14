@@ -60,11 +60,11 @@ public class LearnIntent extends AppCompatActivity {
         * */
 
 
-        try{
-            startActivity(new Intent(this, MainActivity.class));
-        }catch (Exception e){
-            Toast.makeText(this,"无法启动指定activity",Toast.LENGTH_SHORT).show();
-        }
+//        try{
+//            startActivity(new Intent(this, MainActivity.class));
+//        }catch (Exception e){
+//            Toast.makeText(this,"无法启动指定activity",Toast.LENGTH_SHORT).show();
+//        }
 
 
         /*
