@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.huangfeng.uiwidgettest">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -13,7 +16,6 @@
         <activity
             android:name=".MainActivity"
             android:label="Main1">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -33,16 +35,25 @@
         <activity android:name=".NewsContentActivity" />
         <activity android:name=".news_main_activity" />
         <activity android:name=".BoradcastTest" />
-        <activity android:name=".LearnIntent"></activity>
-        <activity android:name=".Main2"
+        <activity android:name=".LearnIntent" />
+        <activity
+            android:name=".Main2"
             android:label="Main2">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
+
+        <receiver
+            android:name=".BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
